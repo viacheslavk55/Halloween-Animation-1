@@ -6,7 +6,11 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background: #424f6f;
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #container {
@@ -14,7 +18,6 @@ body {
     height: 400px;
     padding: 0;
     box-sizing: border-box;
-    background: #424f6f;
 }
 
 *:after,
@@ -49,7 +52,7 @@ body {
     height: 36px;
     border-radius: 50%;
     background: #f2fbf1;
-    animation: floaty .2s infinite;
+    animation: floaty 0.5s infinite;
 }
 
 #spooky #body:before {
@@ -75,27 +78,18 @@ body {
     display: block;
     width: 30px;
     height: 30px;
-    background: #252c49;
+    background: #000000;
     border-radius: 50%;
 }
 
 #spooky #body #mouth {
-    background: #252c49;
+    background: #000000;
     margin: 25px auto 0;
     width: 60px;
     height: 30px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 
-}
-
-#spooky #body #mouth:before {
-    content: ' ';
-    display: block;
-    background: #fff;
-    margin-left: 20px;
-    width: 10px;
-    height: 10px;
 }
 
 #spooky #body #feet {
@@ -120,11 +114,12 @@ body {
  
 #shadow {
     margin: -90px auto 0;
-    background: #252c49;
+    background: #8deeff;
     width: 180px;
     height: 40px;
     border-radius: 50%;
     animation: zoomy 2s infinite;
+    border: 3px solid rgb(255, 255, 255);
 }
 
 @keyframes floaty {
@@ -143,4 +138,11 @@ body {
     50% {
         transform: scale(0.8);
     }
+}
+.hovers {
+    transition: 1s;
+}
+
+.hovers:hover {
+    transform: scale(50%) translateY(50%) translateX(-150%);
 }
